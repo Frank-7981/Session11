@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai tap 2</title>
+</head>
+
+<body>
+    <script>
+        // tìm số nguyên tố
+        function kiemSnt(n) {
+            let num = true;
+            if (n < 2) {
+                num = false;
+            }
+            else {
+                for (let i = 2; i < n - 1; i++) {
+                    if (n % i == 0) {
+                        num = false;
+                        break;
+                    }
+                }
+            }
+            return num;
+        }
+        let input = [9, 2, 3, 7, 1];
+        let sum = 0;
+        for (let i = 0; i < input.length; i++) {
+            if (kiemSnt(input[i])) {
+                console.log(`Số nguyên tố là: ${input[i]}`);
+                sum += input[i];
+            }
+        }
+        console.log(`Tổng các số nguyên tố là : ${sum}`);
+    </script>
+</body>
+
+</html>

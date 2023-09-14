@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai tap 4</title>
+</head>
+
+<body>
+    <script>
+        let str = ('abcdef1234');
+        function deleteNumbers(str) {
+            let array = str.split('');
+            array = array.filter(item => Number.isNaN(Number(item))); // Hàm điều kiện
+            let result = array.join(''); // Nối lại các ký tự thành chuỗi
+            return result;
+        }
+
+        let result = deleteNumbers(str);
+        console.log(result);
+    </script>
+</body>
+
+</html>
